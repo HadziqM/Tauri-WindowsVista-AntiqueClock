@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #2f3632;
+  overflow: hidden;
+}
+.container {
+  position: relative;
+}
+.clock {
+  position: relative;
+  width: 95vw;
+  height: 95vh;
+  background: black;
+  border-radius: 50%;
+  color: white;
+  box-shadow: 1vh 3vh 5vh rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clock::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: black;
+  border: black;
+  border-radius: 50%;
+}
+.clock span {
+  position: absolute;
+  text-align: center;
+  inset: 5px;
+}
+.clock span b {
+  font-size: 1.8em;
+  font-weight: 900;
+  display: inline-block;
+}
+.circle {
+  position: absolute;
+  width: 75vh;
+  height: 75vw;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.circle2 {
+  width: 70vw;
+  height: 70vh;
+}
+.circle3 {
+  width: 65vw;
+  height: 65vh;
+}
+.circle i {
+  position: absolute;
+  width: 6px;
+  height: 50%;
+  opacity: 0.75;
+  transform-origin: bottom;
+  transform: scaleY(0.5);
+}
+.circle:nth-child(1) i {
+  width: 2px;
+}
+.circle:nth-child(2) i {
+  width: 4px;
+}
+.circle:nth-child(3) i {
+  width: 6px;
+}
+.titlebar {
+  height: 100vh;
+  background: transparent;
+  user-select: none;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.st1::before,
+.st3::before,
+.st2::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  top: -8.5px;
+  height: 15px;
+  border-radius: 40%;
+}
+.st1::before {
+  background: red;
+  box-shadow: 0 0 20px gold, 0 0 60px gold;
+}
+.st2::before {
+  background: aqua;
+  box-shadow: 0 0 20px aqua, 0 0 60px gold;
+}
+.st3::before {
+  background: skyblue;
+  box-shadow: 0 0 20px skyblue, 0 0 60px gold;
+}
+.background {
+  position: absolute;
+  top: -2.5vh;
+  left: -2.5vw;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(biru.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.background2 {
+  position: relative;
+  border-radius: 50%;
+  z-index: 999;
+  height: 60vh;
+  width: 60vw;
+  background-image: url(founder.png);
+  background-size: cover;
+  background-position-x: 90%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+.background3 {
+  position: fixed;
+  border-radius: 50%;
+  height: 60vh;
+  width: 60vw;
+  background: skyblue;
+}
