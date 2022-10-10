@@ -5,18 +5,13 @@ interface ClockProps {}
 interface ClockState {}
 
 class Clock extends React.Component<ClockProps, ClockState> {
-  // constructor(props: any) {
-  //   super(props);
-  //   this.state = {
-  //     second: { transform: "rotateZ(0deg)" },
-  //     minute: { transform: "rotateZ(0deg)" },
-  //     hour: { transform: "rotateZ(0deg)" },
-  //   };
-  // }
   state = {
     second: { transform: "rotateZ(0deg)" },
     minute: { transform: "rotateZ(0deg)" },
     hour: { transform: "rotateZ(0deg)" },
+    mm: 12,
+    hh: 12,
+    sket: { display: "block" },
   };
 
   interval = setInterval(() => this.newday(), 1000);
@@ -32,11 +27,33 @@ class Clock extends React.Component<ClockProps, ClockState> {
     let hh = day.getHours() * 30;
     let mm = day.getMinutes() * 6;
     let ss = day.getSeconds() * 6;
+    let hour = day.getHours();
+    let min = day.getMinutes();
+    let norm;
+    let morm;
+    if (hour < 10) {
+      norm = "0" + hour;
+    } else {
+      norm = hour;
+    }
+    if (min < 10) {
+      morm = "0" + min;
+    } else {
+      morm = min;
+    }
+
+    let sket = { display: "block" };
+    if ((ss / 6) % 2 == 0) {
+      sket = { display: "none" };
+    }
 
     this.setState({
       hour: { transform: "rotateZ(" + (hh % 12) + "deg)" },
       minute: { transform: "rotateZ(" + mm + "deg)" },
       second: { transform: "rotateZ(" + ss + "deg)" },
+      hh: norm,
+      mm: morm,
+      sket: sket,
     });
   };
   render() {
@@ -46,14 +63,21 @@ class Clock extends React.Component<ClockProps, ClockState> {
         <div className="clock">
           <div className="background3"></div>
           <div className="background2"></div>
+          <div className="testdraw">
+            <p>{this.state.hh}</p>
+            <p style={this.state.sket} className="norm">
+              :
+            </p>
+            <p>{this.state.mm}</p>
+          </div>
 
-          <div className="circle st1" style={this.state.second}>
+          <div className="circle st1" style={this.state.hour}>
             <i style={{ background: "#04fc43" }}></i>
           </div>
-          <div className="circle circle2 st2" style={this.state.minute}>
+          {/* <div className="circle circle2 st2" style={this.state.minute}>
             <i style={{ background: "#fee800" }}></i>
-          </div>
-          <div className="circle circle3 st3" style={this.state.hour}>
+          </div> */}
+          <div className="circle circle3 st3" style={this.state.minute}>
             <i style={{ background: "#ff2972" }}></i>
           </div>
 

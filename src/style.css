@@ -99,22 +99,36 @@ body {
 .st2::before {
   content: "";
   position: absolute;
-  width: 15px;
-  top: -8.5px;
-  height: 15px;
-  border-radius: 40%;
+  width: 25px;
+  top: -20px;
+  height: 25px;
 }
 .st1::before {
-  background: red;
-  box-shadow: 0 0 20px gold, 0 0 60px gold;
+  background-image: url(/kakbah.svg);
+  filter: invert();
+  top: -10px;
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* box-shadow: 0 0 20px gold, 0 0 60px gold; */
 }
 .st2::before {
-  background: aqua;
+  background-image: url(/kakbah.svg);
+  filter: invert();
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   box-shadow: 0 0 20px aqua, 0 0 60px gold;
 }
 .st3::before {
-  background: skyblue;
-  box-shadow: 0 0 20px skyblue, 0 0 60px gold;
+  background-image: url(/kubah.svg);
+  filter: invert();
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* box-shadow: 0 0 20px skyblue, 0 0 60px gold; */
 }
 .background {
   position: absolute;
@@ -123,7 +137,7 @@ body {
   z-index: -1;
   height: 100vh;
   width: 100vw;
-  background-image: url(biru.jpg);
+  background-image: url(/biru.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -134,7 +148,7 @@ body {
   z-index: 999;
   height: 60vh;
   width: 60vw;
-  background-image: url(founder.png);
+  background-image: url(/Founder.png);
   background-size: cover;
   background-position-x: 90%;
   background-position-y: center;
@@ -145,5 +159,27 @@ body {
   border-radius: 50%;
   height: 60vh;
   width: 60vw;
+  z-index: 998;
   background: skyblue;
+}
+.testdraw {
+  width: 25vw;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 50%;
+  z-index: 1000;
+  font-size: 2rem;
+  font-weight: lighter;
+  color: #000;
+  left: 25vw;
+  top: 27vh;
+  box-shadow: 0 0 20px black, 0 0 60px gold;
+}
+.norm {
+  font-size: 2rem;
+  transform: translateY(-3px);
+  color: #00a;
 }
