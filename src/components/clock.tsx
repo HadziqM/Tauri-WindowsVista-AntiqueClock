@@ -48,7 +48,7 @@ class Clock extends React.Component<ClockProps, ClockState> {
     }
 
     this.setState({
-      hour: { transform: "rotateZ(" + (hh % 12) + "deg)" },
+      hour: { transform: "rotateZ(" + hh + "deg)" },
       minute: { transform: "rotateZ(" + mm + "deg)" },
       second: { transform: "rotateZ(" + ss + "deg)" },
       hh: norm,

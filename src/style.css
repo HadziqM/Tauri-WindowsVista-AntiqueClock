@@ -1,4 +1,5 @@
 * {
+  font-size: 12px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -40,11 +41,12 @@ body {
 .clock span {
   position: absolute;
   text-align: center;
-  inset: 5px;
+  inset: 0.2rem;
 }
 .clock span b {
-  font-size: 1.8em;
-  font-weight: 900;
+  color: aqua;
+  font-size: 1.6em;
+  font-weight: 800;
   display: inline-block;
 }
 .circle {
@@ -99,16 +101,14 @@ body {
 .st2::before {
   content: "";
   position: absolute;
-  width: 25px;
-  top: -20px;
-  height: 25px;
+  width: 1.8rem;
+  top: -1.6rem;
+  height: 1.8rem;
 }
 .st1::before {
   background-image: url(/kakbah.svg);
   filter: invert();
-  top: -10px;
-  width: 25px;
-  height: 25px;
+  top: -1rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -171,15 +171,17 @@ body {
   padding: 5px 10px;
   border-radius: 50%;
   z-index: 1000;
-  font-size: 2rem;
-  font-weight: lighter;
   color: #000;
   left: 25vw;
   top: 27vh;
-  box-shadow: 0 0 20px black, 0 0 60px gold;
+  box-shadow: 0 0 10px black;
+}
+.testdraw p {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 .norm {
-  font-size: 2rem;
-  transform: translateY(-3px);
+  font-size: 1rem;
+  transform: translateY(-0.1rem);
   color: #00a;
 }
