@@ -24,7 +24,7 @@ class Clock extends React.Component<ClockProps, ClockState> {
 
   newday = () => {
     let day = new Date();
-    let hh = day.getHours() * 30;
+    let hh = (day.getHours() % 12) * 30 + day.getMinutes() / 2;
     let mm = day.getMinutes() * 6;
     let ss = day.getSeconds() * 6;
     let hour = day.getHours();

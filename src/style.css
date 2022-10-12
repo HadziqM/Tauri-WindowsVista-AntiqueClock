@@ -41,11 +41,11 @@ body {
 .clock span {
   position: absolute;
   text-align: center;
-  inset: 0.2rem;
+  inset: 1px;
 }
 .clock span b {
-  color: aqua;
-  font-size: 1.6em;
+  color: skyblue;
+  font-size: 2.2em;
   font-weight: 800;
   display: inline-block;
 }
@@ -101,17 +101,19 @@ body {
 .st2::before {
   content: "";
   position: absolute;
-  width: 1.8rem;
-  top: -1.6rem;
-  height: 1.8rem;
+  width: 2.3rem;
+  top: -3rem;
+  height: 2.3rem;
+  z-index: 999;
 }
 .st1::before {
   background-image: url(/kakbah.svg);
   filter: invert();
-  top: -1rem;
+  top: -2.2rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 999;
   /* box-shadow: 0 0 20px gold, 0 0 60px gold; */
 }
 .st2::before {
@@ -146,8 +148,8 @@ body {
   position: relative;
   border-radius: 50%;
   z-index: 999;
-  height: 60vh;
-  width: 60vw;
+  height: 70vh;
+  width: 70vw;
   background-image: url(/Founder.png);
   background-size: cover;
   background-position-x: 90%;
@@ -157,13 +159,13 @@ body {
 .background3 {
   position: fixed;
   border-radius: 50%;
-  height: 60vh;
-  width: 60vw;
+  height: 70vh;
+  width: 70vw;
   z-index: 998;
   background: skyblue;
 }
 .testdraw {
-  width: 25vw;
+  width: 30vw;
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -172,12 +174,12 @@ body {
   border-radius: 50%;
   z-index: 1000;
   color: #000;
-  left: 25vw;
-  top: 27vh;
+  left: 20vw;
+  top: 23vh;
   box-shadow: 0 0 10px black;
 }
 .testdraw p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 .norm {
